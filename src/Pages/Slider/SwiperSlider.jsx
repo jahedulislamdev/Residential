@@ -11,7 +11,8 @@ import './slider.css'
 const SwiperSlider = () => {
    return (
       <Swiper
-         spaceBetween={50}
+         spaceBetween={30}
+         speed={1500}
          slidesPerView={1}
          navigation={{
             nextEl: '.swiper-button-next',

@@ -1,6 +1,6 @@
 const Navbar = () => {
    return (
-      <div className=" bg-[#5d3f6a] text-white text-sm navbar sticky top-0 z-[50]">
+      <div className=" bg-[#5d3f6a73] text-white text-sm navbar sticky top-0 z-[50]">
          <div className="flex-1">
             <a className="btn btn-ghost text-xl font-bold">HomeHaven</a>
          </div>

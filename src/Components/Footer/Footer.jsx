@@ -2,16 +2,16 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
    const socialMediaIcos = <>
-      <a href="#" className=" hover:text-gray-300">
+      <a href="#" className=" hover:text-gray-300 transition-colors">
          <FaFacebookF className="size-6" />
       </a>
-      <a href="#" className=" hover:text-gray-300">
+      <a href="#" className=" hover:text-gray-300 transition-colors">
          <FaTwitter className="size-6" />
       </a>
-      <a href="#" className=" hover:text-gray-300">
+      <a href="#" className=" hover:text-gray-300 transition-colors">
          <FaInstagram className="size-6" />
       </a>
-      <a href="#" className=" hover:text-gray-300">
+      <a href="#" className=" hover:text-gray-300 transition-colors">
          <FaLinkedin className="size-6" />
       </a>
    </>
@@ -33,18 +33,18 @@ const Footer = () => {
             </div>
 
             {/* Center Section: Quick Links */}
-            <div className="flex justify-evenly md:space-x-6 text-lg text-gray-400">
+            <div className="flex justify-evenly md:space-x-9 text-md text-gray-400">
                {quickLinks}
             </div>
 
             {/* Right Section: Social Media Icons */}
-            <div className="flex justify-evenly md:space-x-5 text-gray-500">
+            <div className="flex justify-evenly md:space-x-8 text-gray-500 ">
                {socialMediaIcos}
             </div>
          </div>
 
          {/* Bottom Section: Copyright */}
-         <div className="text-center text-gray-400 mt-9 text-sm font-light">
+         <div className="text-center text-gray-400  mt-9 text-sm font-light">
             © 2025 HomeHaven. All rights reserved.
          </div>
       </footer>
