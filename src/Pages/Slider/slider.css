@@ -1,0 +1,30 @@
+.swiper {
+    margin-top: 5px;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background: linear-gradient(#5c258d51, #4389a262);
+    border-radius: 10px;
+}
+.swiper-slide {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 15px;
+    color: #ffffff9b;
+    background: #ffffff1a;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
