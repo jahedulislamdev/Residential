@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image": "image1.jpg",
+        "image": "https://i.postimg.cc/wTdgdNJG/resedential-house-1.jpg",
         "estate_title": "Luxury Villa",
         "segment_name": "Residential",
         "detailed_description": "A beautiful luxury villa with modern amenities. This villa features a spacious living area, state-of-the-art kitchen, and a large garden. It is located in a prime area with easy access to shopping centers, schools, and hospitals. The villa is designed with a modern aesthetic and offers a comfortable and luxurious lifestyle.",
@@ -13,7 +13,7 @@
     },
     {
         "id": 2,
-        "image": "image2.jpg",
+        "image": "https://i.postimg.cc/2jWrJGqW/resedential-house-6jpg.jpg",
         "estate_title": "Modern Apartment",
         "segment_name": "Residential",
         "detailed_description": "A modern apartment with a great view. This apartment is located in a high-rise building and offers stunning views of the city. It comes with a fully equipped kitchen, spacious bedrooms, and a balcony. The building has amenities such as a gym, parking, and 24/7 security. It is conveniently located near public transport and shopping areas.",
@@ -25,7 +25,7 @@
     },
     {
         "id": 3,
-        "image": "image3.jpg",
+        "image": "https://i.postimg.cc/vBgbGL3p/resedential-house-3.jpg",
         "estate_title": "Cozy Cottage",
         "segment_name": "Residential",
         "detailed_description": "A cozy cottage in a quiet neighborhood. This cottage offers a peaceful retreat with its charming design and comfortable interiors. It features a fireplace, a well-maintained garden, and a modern kitchen. The neighborhood is known for its tranquility and is perfect for those looking to escape the hustle and bustle of the city.",
@@ -37,7 +37,7 @@
     },
     {
         "id": 4,
-        "image": "image4.jpg",
+        "image": "https://i.postimg.cc/V6x1vrh5/resedential-house-4.jpg",
         "estate_title": "Spacious Bungalow",
         "segment_name": "Residential",
         "detailed_description": "A spacious bungalow with a large backyard. This bungalow is ideal for families, offering ample space and a variety of amenities. It includes a garage, a modern kitchen, and multiple washrooms. The backyard is perfect for outdoor activities and gatherings. The bungalow is located in a family-friendly neighborhood with parks and schools nearby.",
@@ -49,7 +49,7 @@
     },
     {
         "id": 5,
-        "image": "image5.jpg",
+        "image": "https://i.postimg.cc/pd1PN1Yf/resedential-house-5.jpg",
         "estate_title": "Penthouse Suite",
         "segment_name": "Residential",
         "detailed_description": "A luxurious penthouse suite with stunning views. This penthouse offers an exclusive living experience with its high-end finishes and premium amenities. It features a rooftop terrace, a private elevator, and spacious living areas. The penthouse is located in an exclusive area, providing privacy and luxury. It is perfect for those seeking a high standard of living.",
@@ -58,5 +58,17 @@
         "area": "3000 sq ft",
         "facilities": "4 wash rooms, 1 kitchen, rooftop terrace, private elevator",
         "additional_info": "Exclusive location"
+    },
+    {
+        "id": 6,
+        "image": "https://i.postimg.cc/dtQDh98g/resedential-house-7.jpg",
+        "estate_title": "Elegant Townhouse",
+        "segment_name": "Residential",
+        "detailed_description": "An elegant townhouse located in a vibrant neighborhood. This townhouse features a modern design with high-quality finishes. It includes a spacious living room, a fully equipped kitchen, and a private patio. The neighborhood offers a variety of amenities including parks, restaurants, and shops. It is perfect for those looking for a stylish and convenient living space.",
+        "price": "45000 BDT",
+        "status": "sale",
+        "area": "2000 sq ft",
+        "facilities": "3 wash rooms, 1 kitchen, private patio, garage",
+        "additional_info": "Vibrant neighborhood"
     }
 ]

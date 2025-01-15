@@ -1,6 +1,11 @@
-# React + Vite
+HomeHeaven - Your Gateway to Dream Homes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Description:
+Welcome to HomeHeaven, the ultimate destination for finding your perfect residential property. Whether you're looking to buy, rent, or explore, HomeHeaven offers an extensive collection of real estate options tailored to your needs. With a seamless user experience and trusted listings, we make your journey to finding your dream home effortless and enjoyable.
+
+Key feathers: 
+1.
+2.
 
 Currently, two official plugins are available:
 
