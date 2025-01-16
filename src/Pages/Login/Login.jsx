@@ -1,20 +1,43 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { FaFacebook } from 'react-icons/fa';
 import { FcGoogle } from "react-icons/fc";
 import { Link } from 'react-router-dom';
+import { ContextProvider } from '../../Provider/DataProvider';
+import toast, { Toaster } from 'react-hot-toast';
+import { IoEye } from "react-icons/io5";
+// import { IoEyeOff } from "react-icons/io5";
 const Login = () => {
+   const { LoginUserWithEmailandPassword, setUser, user } = useContext(ContextProvider);
+   const [showPass, setShowPass] = useState(false);
    const handleFormSubmit = (e) => {
       e.preventDefault();
+      setUser(null);
+      const userData = new FormData(e.currentTarget);
+      const Email = userData.get("email");
+      const Password = userData.get("password");
+
+      LoginUserWithEmailandPassword(Email, Password)
+         .then(res => {
+            toast.success("Login successfull");
+            setUser(res.user)
+         })
+         .catch(err => {
+            if (err.code === "auth/invalid-credential")
+               toast.error("Invalid email or password");
+         });
    }
    return (
-      <div className='md:w-1/3 mx-auto border border-[#354c74] shadow-md py-7 my-3 rounded-lg'>
+      <div className='w-11/12 sm:w-1/2 md:w-1/3 mx-auto border border-[#354c74] shadow-md my-3 py-4 rounded-lg'>
          <form onSubmit={handleFormSubmit} className="card-body">
             <p className='px-2 text-violet-300 text-2xl font-semibold'>Login</p>
             <div className="form-control">
-               <input type="email" placeholder="example@email.com" className="input input-bordered" required />
+               <input name='email' type="email" placeholder="example@email.com" className="input input-bordered focus:outline-none" required />
             </div>
             <div className="form-control">
-               <input type="password" placeholder="password" className="input input-bordered" required />
+               <div className="join items-center border border-gray-700">
+                  <input name='password' type="password" placeholder="password" className="join-item w-full border-r-0 input focus:outline-none input-bordered" required />
+                  <button type='button' className='join-item p-2 focus:border-violet-500'>{showPass ? <IoEye className='size-5' /> : <IoEyeOff className='size-5' />}</button>
+               </div>
             </div>
             <div className="form-control">
                <label className="cursor-pointer justify-start space-x-2 label">
@@ -40,6 +63,7 @@ const Login = () => {
                </div>
             </div>
          </div>
+         <Toaster position='top-right' />
       </div>
    );
 };
