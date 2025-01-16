@@ -5,6 +5,7 @@ import App from "../App";
 import EstateDetail from "../Pages/Residential/EstateDetail";
 import PrivateRoute from "../Private/PrivateRoute";
 import Login from "../Pages/Login/Login";
+import Registration from "../Pages/Registration/Registration";
 
 const route = createBrowserRouter([
     {
@@ -13,9 +14,9 @@ const route = createBrowserRouter([
         errorElement: <Error />,
         children: [
             { path: "/", element: <App /> },
-            { path: "/registration" },
             { path: "/estate/:id", element: <PrivateRoute><EstateDetail /></PrivateRoute> },
-            { path: "/login", element: <Login /> }
+            { path: "/login", element: <Login /> },
+            { path: '/registration', element: <Registration /> }
         ],
     },
 ]);
