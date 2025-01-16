@@ -8,7 +8,7 @@
     text-align: center;
     margin: auto;
     background: linear-gradient(#5c258d51, #4389a262);
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
 }
 .swiper-slide {
     color: #fff;

@@ -4,7 +4,7 @@ import Residential from "./Pages/Residential/Residential";
 
 const App = () => {
   return (
-    <div className="">
+    <div className="container mx-auto">
       <SwiperSlider />
       <Residential />
       <Helmet title="HomeHeaven - Home" />
