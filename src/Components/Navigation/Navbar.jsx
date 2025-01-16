@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ContextProvider } from "../../Provider/DataProvider";
 
 const Navbar = () => {
-   const { user } = useContext(ContextProvider);
+   const { user, logoutUser } = useContext(ContextProvider);
    return (
       <div className=" bg-[#5d3f6a] text-white text-sm navbar sticky top-0 z-[50]">
          <div className="flex-1">
@@ -16,19 +16,19 @@ const Navbar = () => {
             <div tabIndex={0} className="dropdown dropdown-end">
                <div role="button" className="btn btn-circle avatar">
                   <div className="w-8 rounded-full">
-                     <img src="https://cdn-icons-png.flaticon.com/128/9308/9308008.png" />
+                     <img src={user ? user.photoURL : "https://cdn-icons-png.flaticon.com/128/9308/9308008.png"} />
                   </div>
                </div>
                <ul tabIndex={0}
                   className="menu dropdown-content bg-base-100 rounded-xl z-[50] mt-3 w-52 p-2 shadow-xl">
                   <li>
-                     <Link to={'/profile'} className="justify-between">
+                     {user && <Link to={'/profile'} className="justify-between">
                         Your Profile
                         <span className="badge">New</span>
-                     </Link>
+                     </Link>}
                   </li>
-                  <li><Link>Update Profile</Link></li>
-                  {user ? <li><Link>Logout</Link></li> : <li><Link to={"/login"}>Login</Link></li>}
+                  {user && <li><Link to={'/edit_profile'}>Update Profile</Link></li>}
+                  {user ? <li><button onClick={logoutUser}>Logout</button></li> : <li><Link to={"/login"}>Login</Link></li>}
                </ul>
             </div>
          </div>

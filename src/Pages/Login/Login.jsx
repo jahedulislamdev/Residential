@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import { ContextProvider } from '../../Provider/DataProvider';
 import toast, { Toaster } from 'react-hot-toast';
 import { IoEye } from "react-icons/io5";
-// import { IoEyeOff } from "react-icons/io5";
+import { IoEyeOff } from "react-icons/io5";
 const Login = () => {
-   const { LoginUserWithEmailandPassword, setUser, user } = useContext(ContextProvider);
+   const { LoginUserWithEmailandPassword, setUser, loginWithGoogle } = useContext(ContextProvider);
    const [showPass, setShowPass] = useState(false);
    const handleFormSubmit = (e) => {
       e.preventDefault();
@@ -35,8 +35,8 @@ const Login = () => {
             </div>
             <div className="form-control">
                <div className="join items-center border border-gray-700">
-                  <input name='password' type="password" placeholder="password" className="join-item w-full border-r-0 input focus:outline-none input-bordered" required />
-                  <button type='button' className='join-item p-2 focus:border-violet-500'>{showPass ? <IoEye className='size-5' /> : <IoEyeOff className='size-5' />}</button>
+                  <input name='password' type={showPass ? "text" : "password"} placeholder="password" className="join-item w-full border-r-0 input focus:outline-none input-bordered" required />
+                  <button onClick={() => setShowPass(!showPass)} type='button' className='join-item p-2 focus:border-violet-500'>{showPass ? <IoEye className='size-5' /> : <IoEyeOff className='size-5' />}</button>
                </div>
             </div>
             <div className="form-control">
@@ -58,7 +58,7 @@ const Login = () => {
                   <span className="flex-grow h-px bg-gray-600"></span>
                </div>
                <div className='flex w-full space-x-5'>
-                  <button className='flex items-center justify-center border border-orange-400 rounded-md py-2 w-full px-4'><FcGoogle className='size-5 me-1' /> Google</button>
+                  <button onClick={loginWithGoogle} className='flex items-center justify-center border border-orange-400 rounded-md py-2 w-full px-4'><FcGoogle className='size-5 me-1' /> Google</button>
                   <button className='flex items-center justify-center border border-blue-500 rounded-md py-2 w-full px-4'><FaFacebook className='size-5 me-1 text-blue-400' /> Facebook</button>
                </div>
             </div>
