@@ -31,7 +31,7 @@ const Login = () => {
          });
    }
    return (
-      <div className='w-11/12 sm:w-1/2 md:w-2/3 lg:1/3 mx-auto border border-[#354c74] shadow-md my-3 py-4 rounded-lg'>
+      <div className='w-11/12 sm:w-1/2 md:w-2/3 lg:w-1/3 mx-auto border border-[#354c74] shadow-md my-3 py-4 rounded-lg'>
          <form onSubmit={handleFormSubmit} className="card-body">
             <p className='px-2 text-violet-300 text-2xl font-semibold'>Login</p>
             <div className="form-control">
