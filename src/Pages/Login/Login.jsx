@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { FaFacebook } from 'react-icons/fa';
 import { FcGoogle } from "react-icons/fc";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ContextProvider } from '../../Provider/DataProvider';
 import toast, { Toaster } from 'react-hot-toast';
 import { IoEye } from "react-icons/io5";
@@ -9,6 +9,8 @@ import { IoEyeOff } from "react-icons/io5";
 const Login = () => {
    const { LoginUserWithEmailandPassword, setUser, loginWithGoogle } = useContext(ContextProvider);
    const [showPass, setShowPass] = useState(false);
+   const location = useLocation();
+   const navigate = useNavigate();
    const handleFormSubmit = (e) => {
       e.preventDefault();
       setUser(null);
@@ -20,6 +22,7 @@ const Login = () => {
          .then(res => {
             toast.success("Login successfull");
             setUser(res.user)
+            navigate(location?.state ? location.state : "/")
          })
          .catch(err => {
             if (err.code === "auth/invalid-credential")

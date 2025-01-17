@@ -14,10 +14,8 @@ const Navbar = () => {
                <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
             </div>
             <div tabIndex={0} className="dropdown dropdown-end">
-               <div role="button" className="btn btn-circle avatar">
-                  <div className="w-8 rounded-full">
-                     <img src={user ? user.photoURL : "https://cdn-icons-png.flaticon.com/128/9308/9308008.png"} />
-                  </div>
+               <div role="button" className="btn btn-circle avatar rounded-pill">
+                  <img className="w-[45px] h-[45px] rounded-full object-cover cursor-pointer" src={user ? user.photoURL : "https://cdn-icons-png.flaticon.com/128/9308/9308008.png"} />
                </div>
                <ul tabIndex={0}
                   className="menu dropdown-content bg-base-100 rounded-xl z-[50] mt-3 w-52 p-2 shadow-xl">
