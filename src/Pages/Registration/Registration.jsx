@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ContextProvider } from '../../Provider/DataProvider';
 import toast, { Toaster } from 'react-hot-toast';
 import { updateProfile } from 'firebase/auth';
+import { Helmet } from 'react-helmet-async';
 
 const Registration = () => {
    const { RegisterWithEmailandPassword, ProfileUptoDate } = useContext(ContextProvider);
@@ -38,7 +39,7 @@ const Registration = () => {
          )
    }
    return (
-      <div className='w-11/12 sm:w-1/2 md:w-1/3 mx-auto border border-[#354c74] shadow-md my-3 rounded-lg'>
+      <div className='w-11/12 sm:w-1/2 md:w-2/3 lg:1/3 mx-auto border border-[#354c74] shadow-md my-3 rounded-lg'>
          <form onSubmit={handleFormSubmit} className="card-body">
             <p className='px-2 text-violet-300 text-2xl font-semibold'>Registration</p>
             <div className="form-control">
@@ -67,6 +68,7 @@ const Registration = () => {
          <Toaster
             position='top-right'
             reverseOrder={true} />
+         <Helmet title='HomeHeaven - Registration' />
       </div>
    );
 };

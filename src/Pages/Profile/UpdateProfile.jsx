@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { ContextProvider } from '../../Provider/DataProvider';
 import toast, { Toaster } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const UpdateProfile = () => {
    const { user, setUser, ProfileUptoDate } = useContext(ContextProvider);
@@ -46,6 +47,7 @@ const UpdateProfile = () => {
             </button>
          </div>
          <Toaster position='top-right' />
+         <Helmet title='HomeHeaven - Edit Profile' />
       </form>
    );
 };

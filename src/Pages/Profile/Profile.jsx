@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { ContextProvider } from '../../Provider/DataProvider';
 import { Link, useNavigate } from 'react-router-dom';
 import { IoIosArrowBack } from "react-icons/io";
+import { Toaster } from 'react-hot-toast';
+import { Helmet } from 'react-helmet-async';
 
 const Profile = () => {
    const { user } = useContext(ContextProvider);
@@ -23,6 +25,8 @@ const Profile = () => {
                <p className='text-violet-300 text-sm sm:text-md md:text-md'>Email : {user?.email}</p>
             </div>
          </div>
+         <Toaster position='top-right' />
+         <Helmet title='HomeHeaven - Profile' />
       </div>
    );
 };

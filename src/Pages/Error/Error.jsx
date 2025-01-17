@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useRouteError } from "react-router-dom";
 
 const Error = () => {
@@ -15,6 +16,7 @@ const Error = () => {
                <p className="text-xs sm:text-lg md:text-xl font-semibold text-red-600">An Unexpected Application Error occared</p>
             </div>
          }
+         <Helmet title="HomeHeaven - Error" />
       </>
    );
 };

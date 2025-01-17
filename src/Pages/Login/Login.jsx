@@ -6,6 +6,7 @@ import { ContextProvider } from '../../Provider/DataProvider';
 import toast, { Toaster } from 'react-hot-toast';
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
+import { Helmet } from 'react-helmet-async';
 const Login = () => {
    const { LoginUserWithEmailandPassword, setUser, loginWithGoogle } = useContext(ContextProvider);
    const [showPass, setShowPass] = useState(false);
@@ -30,7 +31,7 @@ const Login = () => {
          });
    }
    return (
-      <div className='w-11/12 sm:w-1/2 md:w-1/3 mx-auto border border-[#354c74] shadow-md my-3 py-4 rounded-lg'>
+      <div className='w-11/12 sm:w-1/2 md:w-2/3 lg:1/3 mx-auto border border-[#354c74] shadow-md my-3 py-4 rounded-lg'>
          <form onSubmit={handleFormSubmit} className="card-body">
             <p className='px-2 text-violet-300 text-2xl font-semibold'>Login</p>
             <div className="form-control">
@@ -67,6 +68,7 @@ const Login = () => {
             </div>
          </div>
          <Toaster position='top-right' />
+         <Helmet title='HomeHeaven - Login' />
       </div>
    );
 };
