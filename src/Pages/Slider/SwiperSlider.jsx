@@ -41,7 +41,7 @@ const SwiperSlider = () => {
       <Swiper
          id='swiperMain'
          spaceBetween={30}
-         speed={1000}
+         speed={1500}
          slidesPerView={1}
          navigation={{
             nextEl: '.swiper-button-next',
@@ -59,11 +59,11 @@ const SwiperSlider = () => {
          {/* Slides */}
          {
             sliderData.map(slider =>
-               <SwiperSlide key={slider.id} style={{ background: "#2C264A", borderRadius: "10px" }}>
-                  <div className='flex justify-center h-96 w-full items-center'>
-                     <div className='space-y-4'>
-                        <p className='text-violet-300 text-3xl font-semibold'>{slider.title}</p>
-                        <p className='font-light text-gray-400'>{slider.description}</p>
+               <SwiperSlide key={slider.id}>
+                  <div className='flex justify-center h-64 sm:h-96  w-full items-center'>
+                     <div className='space-x-2 sm:space-y-4'>
+                        <p className='text-violet-300 text-md sm:text-3xl font-semibold'>{slider.title}</p>
+                        <p className='font-light text-xs text-gray-400'>{slider.description}</p>
                      </div>
                   </div>
                </SwiperSlide>)

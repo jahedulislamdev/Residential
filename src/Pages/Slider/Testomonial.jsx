@@ -7,6 +7,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 import { FaRegStarHalfStroke } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 const Testimonial = () => {
    const testimonials = [
@@ -77,18 +78,20 @@ const Testimonial = () => {
          {
             testimonials.map(tes =>
                <SwiperSlide key={tes.id} className='md:p-8 p-4 rounded-lg'>
-                  <div className='flex justify-center items-center space-x-5 md:mb-10 mb-4'>
-                     <img className='rounded-full w-10 sm:w-20' src={tes.image} alt="" />
-                     <div>
-                        <p className='font-semibold text-md sm:text-lg'>{tes.name}</p>
-                        <p className='text-xs md:text-sm font-light text-left'>{tes.role}</p>
+                  <Link>
+                     <div className='flex justify-center items-center space-x-5 md:mb-10 mb-4'>
+                        <img className='rounded-full w-10 sm:w-20' src={tes.image} alt="" />
+                        <div>
+                           <p className='font-semibold text-md sm:text-lg'>{tes.name}</p>
+                           <p className='text-xs md:text-sm font-light text-left'>{tes.role}</p>
+                        </div>
                      </div>
-                  </div>
-                  <p className='text-violet-300 text-left text-sm sm:text-lg max-h-24 sm:max-h-40 overflow-hidden'>{tes.message.slice(0, 170) + "..."}</p>
-                  <div className='flex items-center justify-between sm:mt-9 mt-5'>
-                     <p className='flex space-x-2 text-yellow-300'><FaStar /><FaStar /><FaStar /><FaRegStarHalfStroke /><FaRegStar /></p>
-                     <p className='text-gray-300 font-light'>{tes.date}</p>
-                  </div>
+                     <p className='text-violet-300 text-left text-sm sm:text-lg max-h-24 sm:max-h-40 overflow-hidden'>{tes.message.slice(0, 170) + "..."}</p>
+                     <div className='flex items-center justify-between sm:mt-9 mt-5'>
+                        <p className='flex space-x-2 text-yellow-300'><FaStar /><FaStar /><FaStar /><FaRegStarHalfStroke /><FaRegStar /></p>
+                        <p className='text-gray-300 font-light'>{tes.date}</p>
+                     </div>
+                  </Link>
                </SwiperSlide>)
          }
       </Swiper>
