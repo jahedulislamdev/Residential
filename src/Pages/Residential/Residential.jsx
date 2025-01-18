@@ -1,5 +1,7 @@
+import Testomonial from '../Slider/Testomonial';
 import Estate from './Estate';
 import Gallery from './Gallery';
+import { FaQuoteRight } from "react-icons/fa";
 const Residential = () => {
    return (
       <>
@@ -15,6 +17,11 @@ const Residential = () => {
          </div>
          <div>
             <Estate />
+         </div>
+         <div className='my-9'>
+            <p className='flex justify-center my-3'><FaQuoteRight className='size-7' /></p>
+            <p className='text-center text-2xl text-violet-300 font-semibold mb-9'>Some Reviews</p>
+            <Testomonial />
          </div>
       </>
    );

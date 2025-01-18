@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 const UpdateProfile = () => {
-   const { user, setUser, ProfileUptoDate } = useContext(ContextProvider);
+   const { user, ProfileUptoDate } = useContext(ContextProvider);
    const navigate = useNavigate();
    if (!user) {
-      return <div>No user Found!</div>;
+      return <div className='flex justify-center items-center h-64 text-red-500'>No user Found!</div>;
    }
 
    const handleProfileEdit = async (e) => {

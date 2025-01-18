@@ -15,7 +15,7 @@ const Estate = () => {
                         <img className="rounded-t-lg h-[250px] w-full object-cover" src={est.image} alt="" />
                      </Link>
                      <div className="p-3 space-y-3">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{est.estate_title}</h5>
+                        <h5 className="mb-2 text-lg sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{est.estate_title}</h5>
                         <p className="mb-3 font-light text-gray-700 dark:text-gray-400 text-pretty text-sm" >{est.detailed_description.slice(0, 100) + "..."}</p>
                         <div className='flex justify-between'>
                            <p className='font-medium'>House For: <span className='text-blue-400 font-semibold uppercase'> {est.status}</span></p>

@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, updateProfile, signOut, } from "firebase/auth";
 import app from './../Firebase/Firbase_config';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 export const ContextProvider = createContext();
 
 const DataProvider = ({ children }) => {
@@ -84,7 +85,6 @@ const DataProvider = ({ children }) => {
             displayName: UserName,
             photoURL: userProfile,
          }));
-         toast.success("Profile updated successfully!");
       } catch (err) {
          toast.error("Failed to update profile.");
          throw err;

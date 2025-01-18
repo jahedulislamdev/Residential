@@ -62,7 +62,7 @@ const Login = () => {
                   <span className="flex-grow h-px bg-gray-600"></span>
                </div>
                <div className='flex w-full space-x-5'>
-                  <button onClick={loginWithGoogle} className='flex items-center justify-center border border-orange-400 rounded-md py-2 w-full px-4'><FcGoogle className='size-5 me-1' /> Google</button>
+                  <button onClick={() => loginWithGoogle(navigate("/"))} className='flex items-center justify-center border border-orange-400 rounded-md py-2 w-full px-4'><FcGoogle className='size-5 me-1' /> Google</button>
                   <button className='flex items-center justify-center border border-blue-500 rounded-md py-2 w-full px-4'><FaFacebook className='size-5 me-1 text-blue-400' /> Facebook</button>
                </div>
             </div>

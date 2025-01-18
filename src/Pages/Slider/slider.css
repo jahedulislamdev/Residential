@@ -7,14 +7,17 @@
     align-items: center;
     text-align: center;
     margin: auto;
-    background: linear-gradient(#5c258d51, #4389a262);
+    background: linear-gradient(#0e071451, #4389a232);
     border-radius: 0 0 10px 10px;
+    padding: 20px;
 }
 .swiper-slide {
     color: #fff;
-    display: flex;
+    width: 40px;
+    background-image: linear-gradient(to top, #30d0d06f 0%, #3308676a 100%);
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 .swiper-button-prev:after,
 .swiper-button-next:after {
@@ -31,6 +34,6 @@
 
 @media screen and (max-width: 600px) {
     .swiper {
-        height: 280px;
+        height: 270px;
     }
 }
